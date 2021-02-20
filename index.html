@@ -1,0 +1,81 @@
+<!Doctype HTML>
+<html>
+<head>
+  <!-- Title of the tab -->
+  <title>James Deyette - Portfolio</title>
+  <link rel="shortcut icon" href="https://careerfoundry.com/favicon.ico">
+
+  <!-- Now to Normalize CSS, either this or Reset CSS should always be done -->
+    <link rel ="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!-- Font selection -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- After Normalized or Reset, now I can add my CSS sheet for styling -->
+  <link rel="stylesheet" type="text/css" href="css/style.production.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+  <header class="page-header">
+    <!-- Logo -->
+    <img src="img/header-logo.png" alt="logo" class="page.header__item header-logo">
+    <!-- Links -->
+    <nav class="main-navigation page-header__item">
+      <ul role="menubar" class="navigation-list">
+        <li role="presentation">
+          <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
+        </li>
+        <li role="presentation">
+          <a href="about.html" role="menuitem" class="navigation-list__item">About</a>
+        </li>
+        <li role="presentation">
+          <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+        </li>
+        <li role="presentation">
+          <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+        </li>
+        <!-- then add BootStraps class to move them all to the right of the <header>
+        container, I have yet to still BootStrap-->
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="profile">
+      <!-- Image of myself -->
+      <img src="img/selfie.jpg" width="150px" class="profile__portrait" alt="A picture of James Deyette">
+      <div class="profile__text">
+      <!-- Description -->
+      <h1>Hello World!</h1>
+      <h2>My name is James Deyette</h2>
+      <h2>I am a <span>web</span> developer from USA</h2>
+      <!-- Need to add content to <span>-->
+      <a href="#">Check out some of my code!</a>
+      <!-- ^ Another spot to add anchors and href -->
+    </div>
+    </div>
+
+<!-- Button and link for exercise -->
+    <a href="#">Default Link</a>
+<button type="button">Default Button</button>
+
+<!-- Creating a class for a button so I can style it differently than the one above -->
+<button class="button_secondary">Secondary Button</button>
+
+  </main>
+  <footer class="page-footer">
+    <p>
+      Find me on
+    </p>
+    <div class="social-media">
+    <!-- Logos -->
+    <a href="https://github.com/James5955" target="_blank" rel="noopener"><img src="img/github_icon.svg" alt="GitHub"></a>
+    <a href="https://twitter.com/James5955" target="_blank" rel="noopener"><img src="img/twitter_icon.svg" alt="Twitter"></a>
+    <a href="https://www.linkedin.com/in/james-deyette-0b646554/" target="_blank" rel="noopener"><img src="img/linkedin_icon.svg" alt="LinkedIn"></a>
+  </div>
+  </footer>
+  <script src="js/tota11y.min.js"></script>
+  <!-- ^ for assistance! -->
+</body>
+</html>

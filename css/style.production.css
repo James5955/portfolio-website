@@ -1,0 +1,437 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version
+*/
+
+/* This is how you make notes in CSS */
+
+/* Here I'm defining CSS Variables for the entire HTML scope by defining them
+in the :root psuedo-class */
+:root {
+  /* CSS Variables are defined with -- instead of $ like it is in Sass */
+  /* To pass the property of CSS Varibles you need to use the var() function as
+  a value like: color: var(--primary-color); */
+}
+
+/* This makes the box model work in a way that makes more sense: padding and
+border won’t affect an element’s size if you’ve already specified one. */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  background-color: #FFFFFF;
+}
+
+h1{
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h2{
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3{
+  font-size: 18px;
+  font-weight: 700;
+}
+
+p{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+a {
+  color: #357b70;
+}
+
+a:visited {
+  /* visited link */
+  color: #05676e;
+}
+
+a:hover, a:focus {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+}
+
+a:active {
+  /* selected link */
+  color: ##489c79;
+}
+
+button {
+  border: none;
+  /* font from container it is in */
+  font-family: inherit;
+  /* background color in button box */
+  background-color: #357b70;
+  /* font color in button box */
+  color: white;
+  /* taking off the underline of button */
+  text-decoration: none;
+  /* spacing on the button  */
+  padding: 10px;
+  border-radius: 3px;
+  /* Border and RGBA */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+button:hover, button:focus {
+  /* cursor set to be a hand when hovering over button */
+  cursor: pointer;
+  /* reduces the opacity to indicate it's been hovered over */
+  opacity: 0.6;
+}
+
+.button_secondary {
+  background-color: #e0b354;
+  color: #2b2b2b;
+}
+
+button{
+  /* Styling */
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the button */
+  background-color: #357b70;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.2s opacity;
+  transition: 0.2s opacity;
+  /* Transition properties if not simplified into "transition:"
+  transition-duration: 0.2s;
+  transition-property: opacity; */
+}
+
+.button{
+  /* Styling */
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the button */
+  background-color: #357b70;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.2s opacity;
+  transition: 0.2s opacity;
+  /* Transition properties if not simplified into "transition:"
+  transition-duration: 0.2s;
+  transition-property: opacity; */
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus{
+  /* Styling */
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
+
+/* gets rid of the bullet points on my nav list */
+.navigation-list{
+  list-style-type: none;
+}
+
+.navigation-list li{
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.navigation-list_item--active {
+  text-decoration: none;
+}
+
+.profile{
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.profile__portrait{
+  /* this makes the image appear to the left and lets text wrap around it on the right */
+  float: left;
+  /* Margin is the distance around the outside of an object */
+  margin: 40px;
+  width: 250px;
+  height: auto;
+  /* this changes how the image is displayed, 50% is for a perfect circle */
+  border-radius: 50%;
+}
+
+.page-footer{
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.profile__text{
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100px;
+          flex: 1 1 100px;
+}
+
+.page-header{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  /* creating the border underneath the head of my website, 0.3 is opacity */
+  border-bottom: 2px solid rgba(0,0,0,0.3);
+}
+
+.page-header__item{
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px;
+}
+
+/* Targets the last item in the header FlexBox and aligns it to the right,
+in this case the last item (last-child) is my navigation menu */
+.page-header__item:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: right;
+}
+
+/* resizing my header logo */
+.header-logo {
+  max-width: 200px;
+  max-height: auto;
+}
+
+.grid{
+
+}
+
+/* start grid fallback */
+.grid__item {
+  display: inline-block;
+  width: 33%;
+}
+/* end grid fallback */
+
+@supports (display: grid) {
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    /*fr for fractions of the alotted space instead of pixels (px) */
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows will be applied automatically */
+    grid-gap: 20px;
+  }
+}
+
+.grid__item {
+  background-color: lightgray;
+  width: auto;
+  min-height: auto;
+  margin: 5px;
+  padding: 15px;
+}
+
+.grid__item:last-child {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  -ms-grid-column-span: 0;
+  grid-column-end: 3;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  -ms-grid-row-span: 2;
+  grid-row-end: 3;
+
+  /* this can also be written as
+  grid-column: 3 / 3;
+  grid-row: 1 / 3; */
+
+}
+
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    -ms-grid-columns: 1fr 10px 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.main-about{
+  text-align: center;
+  /* How do I align a table to be center, text-align doesnt work? */
+}
+
+.sun {
+/*
+this could be written out for each property, but you can make it shorter
+and cleaner by putting it all in one line instead
+
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}*/
+  -webkit-animation: 4s color-change infinite alternate linear;
+          animation: 4s color-change infinite alternate linear;
+}
+
+/* animation, changing color from yellow to red
+"color-change is a name created for the animation*/
+@-webkit-keyframes color-change {
+  0% {      /* using variables for color for animation just for shiggles */
+    fill: #edc655;
+  }
+
+  50% {
+    fill: #f76414;
+  }
+
+  100% {
+    fill: #edc655;
+  }
+/* could also be written using from/to, however percentages give you better
+control over it
+
+  from {
+    fill: #edc655;
+  }
+  to {
+    fill: #f76414;
+  }
+  */
+}
+@keyframes color-change {
+  0% {      /* using variables for color for animation just for shiggles */
+    fill: #edc655;
+  }
+
+  50% {
+    fill: #f76414;
+  }
+
+  100% {
+    fill: #edc655;
+  }
+/* could also be written using from/to, however percentages give you better
+control over it
+
+  from {
+    fill: #edc655;
+  }
+  to {
+    fill: #f76414;
+  }
+  */
+}
+
+@-webkit-keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  }
+  to {
+    -webkit-transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
+  }
+}
+
+@keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  }
+  to {
+    -webkit-transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  -webkit-animation: 25s cloud-move infinite alternate linear;
+          animation: 25s cloud-move infinite alternate linear;
+  /* which is also the following code but abbrevated
+  .cloud-front {
+  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  } */
+}
+
+@-webkit-keyframes cloud-move-reverse {
+  from {
+    -webkit-transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
+  }
+  to {
+    -webkit-transform: translate(100px, 48px);
+            transform: translate(100px, 48px);
+  }
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    -webkit-transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
+  }
+  to {
+    -webkit-transform: translate(100px, 48px);
+            transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  -webkit-animation: 30s cloud-move-reverse infinite alternate linear;
+          animation: 30s cloud-move-reverse infinite alternate linear;
+}
