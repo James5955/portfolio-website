@@ -19,7 +19,7 @@ in the :root psuedo-class */
 border won’t affect an element’s size if you’ve already specified one. */
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body{
@@ -189,15 +189,15 @@ button:focus,
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-align: center;
 }
 
 .profile__text{
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 100px;
-          flex: 1 1 100px;
+  -ms-flex: 1 1 100px;
+  flex: 1 1 100px;
 }
 
 .page-header{
@@ -212,16 +212,16 @@ button:focus,
 
 .page-header__item{
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 200px;
-          flex: 0 1 200px;
+  -ms-flex: 0 1 200px;
+  flex: 0 1 200px;
 }
 
 /* Targets the last item in the header FlexBox and aligns it to the right,
 in this case the last item (last-child) is my navigation menu */
 .page-header__item:last-child {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   text-align: right;
 }
 
@@ -264,11 +264,11 @@ in this case the last item (last-child) is my navigation menu */
 
 .grid__item:last-child {
   -ms-grid-column: 3;
-      grid-column-start: 3;
+  grid-column-start: 3;
   -ms-grid-column-span: 0;
   grid-column-end: 3;
   -ms-grid-row: 1;
-      grid-row-start: 1;
+  grid-row-start: 1;
   -ms-grid-row-span: 2;
   grid-row-end: 3;
 
@@ -310,19 +310,19 @@ in this case the last item (last-child) is my navigation menu */
 }
 
 .sun {
-/*
-this could be written out for each property, but you can make it shorter
-and cleaner by putting it all in one line instead
+  /*
+  this could be written out for each property, but you can make it shorter
+  and cleaner by putting it all in one line instead
 
-.sun {
+  .sun {
   animation-duration: 4s;
   animation-name: color-change;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: linear;
-}*/
+  }*/
   -webkit-animation: 4s color-change infinite alternate linear;
-          animation: 4s color-change infinite alternate linear;
+  animation: 4s color-change infinite alternate linear;
 }
 
 /* animation, changing color from yellow to red
@@ -339,16 +339,16 @@ and cleaner by putting it all in one line instead
   100% {
     fill: #edc655;
   }
-/* could also be written using from/to, however percentages give you better
-control over it
+  /* could also be written using from/to, however percentages give you better
+  control over it
 
   from {
-    fill: #edc655;
-  }
-  to {
-    fill: #f76414;
-  }
-  */
+  fill: #edc655;
+}
+to {
+fill: #f76414;
+}
+*/
 }
 @keyframes color-change {
   0% {      /* using variables for color for animation just for shiggles */
@@ -362,43 +362,43 @@ control over it
   100% {
     fill: #edc655;
   }
-/* could also be written using from/to, however percentages give you better
-control over it
+  /* could also be written using from/to, however percentages give you better
+  control over it
 
   from {
-    fill: #edc655;
-  }
-  to {
-    fill: #f76414;
-  }
-  */
+  fill: #edc655;
+}
+to {
+fill: #f76414;
+}
+*/
 }
 
 @-webkit-keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
+    transform: translate(0, 50px);
   }
   to {
     -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
+    transform: translate(200px, 50px);
   }
 }
 
 @keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
+    transform: translate(0, 50px);
   }
   to {
     -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
+    transform: translate(200px, 50px);
   }
 }
 
 .cloud-front {
   -webkit-animation: 25s cloud-move infinite alternate linear;
-          animation: 25s cloud-move infinite alternate linear;
+  animation: 25s cloud-move infinite alternate linear;
   /* which is also the following code but abbrevated
   .cloud-front {
   animation-duration: 30s;
@@ -412,26 +412,26 @@ control over it
 @-webkit-keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
   }
   to {
     -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
   }
 }
 
 @keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
   }
   to {
     -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
   }
 }
 
 .cloud-back {
   -webkit-animation: 30s cloud-move-reverse infinite alternate linear;
-          animation: 30s cloud-move-reverse infinite alternate linear;
+  animation: 30s cloud-move-reverse infinite alternate linear;
 }

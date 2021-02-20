@@ -269,17 +269,17 @@ in this case the last item (last-child) is my navigation menu */
 }
 
 .sun {
-/*
-this could be written out for each property, but you can make it shorter
-and cleaner by putting it all in one line instead
+  /*
+  this could be written out for each property, but you can make it shorter
+  and cleaner by putting it all in one line instead
 
-.sun {
+  .sun {
   animation-duration: 4s;
   animation-name: color-change;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: linear;
-}*/
+  }*/
   animation: 4s color-change infinite alternate linear;
 }
 
@@ -297,16 +297,16 @@ and cleaner by putting it all in one line instead
   100% {
     fill: var(--yellow-sun);
   }
-/* could also be written using from/to, however percentages give you better
-control over it
+  /* could also be written using from/to, however percentages give you better
+  control over it
 
   from {
-    fill: #edc655;
-  }
-  to {
-    fill: #f76414;
-  }
-  */
+  fill: #edc655;
+}
+to {
+fill: #f76414;
+}
+*/
 }
 
 @keyframes cloud-move {
