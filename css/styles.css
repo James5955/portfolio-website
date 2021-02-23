@@ -6,7 +6,7 @@ in the :root psuedo-class */
   /* CSS Variables are defined with -- instead of $ like it is in Sass */
   --primary-color: #357b70;
   --visited-color: #05676e;
-  --active-color: ##489c79;
+  --active-color: #489c79;
   --secondary-color: #e0b354;
   --dark-grey: #2b2b2b;
   --yellow-sun: #edc655;
@@ -149,6 +149,7 @@ button:focus,
 .profile{
   max-width: 700px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 .profile__portrait{
@@ -195,7 +196,7 @@ in this case the last item (last-child) is my navigation menu */
 /* resizing my header logo */
 .header-logo {
   max-width: 200px;
-  max-height: auto;
+  max-height: 200px;
 }
 
 .grid{
@@ -266,6 +267,7 @@ in this case the last item (last-child) is my navigation menu */
 .main-about{
   text-align: center;
   /* How do I align a table to be center, text-align doesnt work? */
+  padding: 20px;
 }
 
 .sun {
