@@ -240,30 +240,6 @@ in this case the last item (last-child) is my navigation menu */
 
 }
 
-@media all and (max-width: 750px) {
-  .grid {
-    grid-gap: 10px;
-  }
-  .grid__item:last-child {
-    grid-column: auto / auto;
-    grid-row: auto / auto;
-  }
-  h1 {
-    font-size: 22px;
-  }
-}
-
-@media all and (max-width: 500px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
-@media all and (min-width: 500px) and (max-width: 750px){
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 .main-about{
   text-align: center;
   /* How do I align a table to be center, text-align doesnt work? */
@@ -343,4 +319,28 @@ fill: #f76414;
 
 .cloud-back {
   animation: 30s cloud-move-reverse infinite alternate linear;
+}
+
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
